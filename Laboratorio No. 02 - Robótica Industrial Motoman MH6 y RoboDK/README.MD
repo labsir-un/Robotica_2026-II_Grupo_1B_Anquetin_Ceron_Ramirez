@@ -1,4 +1,5 @@
 Laboratorio 2 -Analisis y Operacion del Manipulador Motoman MH6.
+- 
 -
 -
 -
@@ -8,5 +9,4 @@ Laboratorio 2 -Analisis y Operacion del Manipulador Motoman MH6.
 -
 -
 -
--
--
+- Link del video de demostracion: https://www.youtube.com/watch?v=zOlbh4mJVK8
