@@ -13,7 +13,7 @@
 
 <h4>Alejandro Ramirez<br>
     Ronan Anquetin<br>
-    Nirvana Ceron 3</h4>
+    Nirvana Ceron</h4>
 
 <p>
   <img alt="Ubuntu 24.04 LTS" src="https://img.shields.io/badge/Ubuntu-24.04%20LTS-E95420?logo=ubuntu&logoColor=white">
