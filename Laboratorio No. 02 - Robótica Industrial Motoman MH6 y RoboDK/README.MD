@@ -1,1 +1,12 @@
-
+Laboratorio 2 -Analisis y Operacion del Manipulador Motoman MH6.
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
