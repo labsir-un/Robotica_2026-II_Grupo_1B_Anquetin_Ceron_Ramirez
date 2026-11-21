@@ -1,0 +1,117 @@
+from robodk.robolink import *
+from robodk.robomath import *
+import math
+from matplotlib.textpath import TextPath
+from matplotlib.font_manager import FontProperties
+from matplotlib.textpath import TextToPath
+
+
+#------------------------------------------------
+# 1) Connexion à RoboDK
+#------------------------------------------------
+RDK = Robolink()
+
+robot = RDK.ItemUserPick("Selecciona un robot", ITEM_TYPE_ROBOT)
+if not robot.Valid():
+    raise Exception("No se ha seleccionado un robot válido.")
+
+
+# Conectar al robot físico
+#if not robot.Connect():
+#    raise Exception("No se pudo conectar al robot. Verifica que esté en modo remoto y que la configuración sea correcta.")
+
+# Confirmar conexión
+#if not robot.ConnectedState():
+#    raise Exception("El robot no está conectado correctamente. Revisa la conexión.")
+
+
+#------------------------------------------------
+# 2) Frame y target home
+#------------------------------------------------
+frame_name = "Frame_from_Target1"
+frame = RDK.Item(frame_name, ITEM_TYPE_FRAME)
+homeFM = RDK.Item("Target_Home", ITEM_TYPE_TARGET)
+if not frame.Valid():
+    raise Exception(f'No se encontró el Frame "{frame_name}" en la estación.')
+if not homeFM.Valid():
+    raise Exception('No se encontró "Target_Home".')
+
+robot.setPoseFrame(frame)
+robot.setPoseTool(robot.PoseTool())
+robot.setSpeed(300)     # mm/s
+robot.setRounding(1)    # blending pequeño (segmentos muy cortos)
+
+#------------------------------------------------
+# 3) Parámetros de la figura
+#------------------------------------------------
+num_points = 50          # puntos de la curva (3000-5000 va bien)
+A = 150                    # radio máximo deseado en mm
+z_surface = 0
+z_safe = 50                # si tu eje Z del frame apunta hacia arriba, usa +z_safe
+
+# Orientación de la herramienta respecto al frame.
+# Si el robot no llega o la herramienta apunta al revés, prueba: rotx(math.pi)
+orient = eye(4)
+
+def pose_xyz(x, y, z):
+    return transl(x, y, z) * orient
+
+#------------------------------------------------
+# 4) Calcular la curva (θ de 0 a 24π)
+#------------------------------------------------
+def r_func(theta):
+    return (
+        math.exp(math.sin(theta))
+        - 2 * math.cos(4 * theta)
+        + math.sin((2 * theta - math.pi) / 24) ** 5
+        + 0.5 * math.sin(8 * theta) * math.cos(theta / 8) ** 2
+    )
+
+full_turn = 24 * math.pi
+thetas = [full_turn * i / num_points for i in range(num_points + 1)]
+radios = [r_func(t) for t in thetas]
+
+# Escalamos para que el radio máximo sea A mm
+scale = A / max(abs(r) for r in radios)
+
+puntos = [(scale * r * math.cos(t), scale * r * math.sin(t))
+          for r, t in zip(radios, thetas)]
+
+#------------------------------------------------
+# 5) Movimiento
+#------------------------------------------------
+robot.MoveJ(homeFM)
+
+# Ir encima del primer punto en altura segura, luego bajar
+x0, y0 = puntos[0]
+robot.MoveJ(pose_xyz(x0, y0, z_surface - z_safe))
+robot.MoveL(pose_xyz(x0, y0, z_surface))
+
+fp = FontProperties(family="sans", style="italic")
+path1, codes = TextToPath().get_text_path(fp, "Alejandro")
+path2, codes = TextToPath().get_text_path(fp, "Nirvana")
+path3, codes = TextToPath().get_text_path(fp, "Ronan")
+
+for punto in path1:
+    x,y=punto
+    robot.MoveL(pose_xyz(y+400,x-path1[-1][0], z_surface))
+for punto in path2:
+    x,y=punto
+    robot.MoveL(pose_xyz(y+300,x-path2[-1][0], z_surface))
+for punto in path3:
+    x,y=punto
+    robot.MoveL(pose_xyz(y+200,x-path3[-1][0], z_surface))
+
+
+# Dibujar
+for (x, y) in puntos:
+    robot.MoveL(pose_xyz(x, y, z_surface))
+
+
+
+# Subir y volver a home
+xf, yf = puntos[-1]
+robot.MoveL(pose_xyz(xf, yf, z_surface - z_safe))
+robot.MoveJ(homeFM)
+
+print(f"¡Figura completada en el frame '{frame_name}'! (escala = {scale:.2f} mm/unidad)")
