@@ -21,7 +21,17 @@ Home 1 y Home 2 son las 2 posiciones de descaso que tiene el Robot, ambas orient
 
 Por otro lado el punto Home 1 es la posición de descanso del manipulador, en este punto el gasto de energía para mantener posición es efectivamente nulo, lo que permite que los frenos experimenten un desgaste mucho menos, demás el volumen conjunto del robot también es menor, lo que facilita el transporte en conjunto. Esta es la posición es mejor para cuando el robot esta apagado por una razón u otra.
 
-### a
+Dada esta informacion la mejor posicion para la operacion del manipulador es Home 2, con el entendimiento de que se llegara a Home 1 antes de que se apague el Robot.
+
+### Movimientos Manuales del Robot
+
+Los movimientos manuales del Robot son realizados via su teach pendant.
+
+<div align="center">
+  <img width="285" height="337" alt="aleramirezgo" alt="Teach Pendant para el robot (mismo modelo pero no el que esta en sala CAM)" src="./tpYaskawa.jpg" />
+</div>
+
+
 ### a
 ### a
 ### a
