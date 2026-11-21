@@ -1,4 +1,4 @@
-### Comparacion
+### Comparacion de robots
 
 | Característica | Motoman MH6 | ABB IRB140 |
 | ------------- | ------------- | ------------- |
@@ -11,7 +11,9 @@
 | Masa | 130 kg | 98 kg |
 
 En lo que respecta a aplicaciones ambos robots trabajan en ámbitos similares, siendo estos aplicaciones industriales que requieren flexibilidad de alcance y herramientas, posiciones de entradas variables y cargas pequeñas o moderadas. Una diferencia particular es la forma en la que ambos robots han sido modificados durante su tiempo en la universidad, particularmente que el Motoman ha sido modificado con otros añadidos durante su tiempo en la sala CAM, el septimo grado de libertad que tiene es para un manipulador lateral y el octavo controla un mecanismo para desplazar el manipulador entero.
-### a
+### Posiciones de Home
+Home 1 y Home 2 
+
 ### a
 ### a
 ### a
