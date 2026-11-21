@@ -33,15 +33,15 @@ Los movimientos manuales del Robot son realizados via su teach pendant (aclaraci
 
 Para operar el robot de forma manual es necesario prenderlo primero (verificar que los reles pertinentes esten prendidos, que el controlador este alimentado, colocar los diales donde deben estar, etc), luego se verifica que la llave este en el modo TEACH, seleccionar el modo de movimiento por articulaciones en la pantalla, y finalmente mover la articulación que se desee usando los botones del teach pendant. Para cambiar al espacio de trabajo se vuelve a la pantalla y se elige ese modo y el sistema de coordenadas que se va a utilizar (de flanche, TPC o de base) y otra vez se pasa a los botones para mover el robot
 
-### Niveles de Velocidad
 ### RoboDK
 ### Comparacion RoboDK y Robotstudio
 
+RobotStudio es en primer lugar un software para productos ABB, eso lo deja mas por debajo en términos de versatilidad, pero a cambio gana profundidad en los robots que utiliza, así como precisión vía los códigos en RAPID, en particular la modalidad de pasar código desde la simulación a RAPID y viceversa es maravilloso a la hora de iterar procesos, tambien es mas complicado de utilizar y pide proyectos en carpetas para funcionar correctamente.
 
+RoboDK a cambio es mucho mas simple, permite traer una gran variedad de productos de varias marcas y ofrece la modalidad compartida de simulación por bloques y el uso de Python, un lenguaje mucho mas general y con mayor cantidad de librerías disponibles, dando opciones directas para la creación de puntos y caminos que requerían soluciones creativas o trabajo intenso en RobotStudio, también da los proyectos en archivos unicos.
 
-En lo personal apoyo mas a RobotStudio en virtud de que los problemas de licencia fueron menores
+En lo personal apoyo mas a RobotStudio en virtud de que los problemas de licencia fueron menores.
 
-### a
 ### Diagrama de flujo
 
 <div align="center">
