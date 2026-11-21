@@ -42,7 +42,13 @@ Para operar el robot de forma manual es necesario prenderlo primero (verificar q
 En lo personal apoyo mas a RobotStudio en virtud de que los problemas de licencia fueron menores
 
 ### a
-### a
-### Guardado como "prog2.txt"
+### Diagrama de flujo
+
+<div align="center">
+  <img width="285" height="337" alt="Diagrama de flujo" src="./Diagrama de flujo.jpg" />
+</div>
+
+### Codigo de la simulacion
+El codigo fue subido de forma independiente como "prog2.txt".
 ### Video de simulación y prueba
 Link del video de demostracion: https://www.youtube.com/watch?v=zOlbh4mJVK8
