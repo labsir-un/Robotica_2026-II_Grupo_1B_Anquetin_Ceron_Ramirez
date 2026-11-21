@@ -31,12 +31,18 @@ Los movimientos manuales del Robot son realizados via su teach pendant (aclaraci
   <img width="285" height="337" alt="aleramirezgo" alt="Teach Pendant para el robot (mismo modelo pero no el que esta en sala CAM)" src="./tpYaskawa.jpg" />
 </div>
 
+Para operar el robot de forma manual es necesario prenderlo primero (verificar que los reles pertinentes esten prendidos, que el controlador este alimentado, colocar los diales donde deben estar, etc), luego se verifica que la llave este en el modo TEACH, seleccionar el modo de movimiento por articulaciones en la pantalla, y finalmente mover la articulación que se desee usando los botones del teach pendant. Para cambiar al espacio de trabajo se vuelve a la pantalla y se elige ese modo y el sistema de coordenadas que se va a utilizar (de flanche, TPC o de base) y otra vez se pasa a los botones para mover el robot
+
+### Niveles de Velocidad
+### RoboDK
+### Comparacion RoboDK y Robotstudio
+
+
+
+En lo personal apoyo mas a RobotStudio en virtud de que los problemas de licencia fueron menores
 
 ### a
 ### a
-### a
-### a
-### a
-### a
+### Guardado como "prog2.txt"
 ### Video de simulación y prueba
 Link del video de demostracion: https://www.youtube.com/watch?v=zOlbh4mJVK8
