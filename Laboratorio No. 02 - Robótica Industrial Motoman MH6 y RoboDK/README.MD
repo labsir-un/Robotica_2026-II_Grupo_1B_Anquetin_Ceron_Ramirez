@@ -15,8 +15,8 @@ En lo que respecta a aplicaciones ambos robots trabajan en ámbitos similares, s
 
 Home 1 y Home 2 son las 2 posiciones de descaso que tiene el Robot, ambas orientadas que el manipulador regrese a ellas y que pase la mayor parte de su tiempo así. La diferencia esta en la escala de operación: Home 2 es la posición que tima el manipulador cuando esta en operación pero no esta tomando alguna accion en particular, es una posición a desde la que las articulaciones deben ejercer comparativamente poco tiempo y energía para llegar a los que les pidan las rutinas creadas por el usuario, al menos en posiciones que no sean extremadamente exoticas, es en efecto un punto coun al que el manipulador puede volver.
 <div align="center">
-  <img width="285" height="337" alt="aleramirezgo" alt="Posicion Home1" src="./Home1.jpg" />
-  <img width="285" height="337" alt="aleramirezgo" alt="Posicion Home2" src="./Home2.jpg" />
+  <img width="285" height="337" alt="Posicion Home1" src="./Home1.jpg" />
+  <img width="285" height="337" alt="Posicion Home2" src="./Home2.jpg" />
 </div>
 
 Por otro lado el punto Home 1 es la posición de descanso del manipulador, en este punto el gasto de energía para mantener posición es efectivamente nulo, lo que permite que los frenos experimenten un desgaste mucho menos, demás el volumen conjunto del robot también es menor, lo que facilita el transporte en conjunto. Esta es la posición es mejor para cuando el robot esta apagado por una razón u otra.
