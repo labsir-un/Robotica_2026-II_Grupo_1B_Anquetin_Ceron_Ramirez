@@ -61,8 +61,8 @@ Aquí se documentan los laboratorios, avances, resultados y la presentación de 
 - **Carrera:** Ingeniería Mecatrónica
 - **Correo institucional:** aleramirezgo@unal.edu.co
 - **Usuario de GitHub:** [usuariogithub](https://github.com/aleramirezgo)
-- **Rol en el equipo:** Ej. Integración ROS 2, documentación, simulación
-- **Intereses:** Robótica móvil, visión artificial, automatización
+- **Rol en el equipo:** Documentacion.
+- **Intereses:** Impresion 3D, control de robots.
 - **Descripción breve:**  
   E
 
