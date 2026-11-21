@@ -25,7 +25,7 @@ Dada esta informacion la mejor posicion para la operacion del manipulador es Hom
 
 ### Movimientos Manuales del Robot
 
-Los movimientos manuales del Robot son realizados via su teach pendant.
+Los movimientos manuales del Robot son realizados via su teach pendant (aclaracion, el teach pendant de la imagen es el mismo modelo del que esta en la sala CAM pero no es exactamente ese).
 
 <div align="center">
   <img width="285" height="337" alt="aleramirezgo" alt="Teach Pendant para el robot (mismo modelo pero no el que esta en sala CAM)" src="./tpYaskawa.jpg" />
@@ -38,6 +38,5 @@ Los movimientos manuales del Robot son realizados via su teach pendant.
 ### a
 ### a
 ### a
-### a
-### Video de la prueba
+### Video de simulación y prueba
 Link del video de demostracion: https://www.youtube.com/watch?v=zOlbh4mJVK8
