@@ -33,7 +33,15 @@ Los movimientos manuales del Robot son realizados via su teach pendant (aclaraci
 
 Para operar el robot de forma manual es necesario prenderlo primero (verificar que los reles pertinentes esten prendidos, que el controlador este alimentado, colocar los diales donde deben estar, etc), luego se verifica que la llave este en el modo TEACH, seleccionar el modo de movimiento por articulaciones en la pantalla, y finalmente mover la articulación que se desee usando los botones del teach pendant. Para cambiar al espacio de trabajo se vuelve a la pantalla y se elige ese modo y el sistema de coordenadas que se va a utilizar (de flanche, TPC o de base) y otra vez se pasa a los botones para mover el robot
 
-### RoboDK
+### Comunicación RoboDK-Motoman
+1. El computador ejecuta RoboDK.
+2. El computador establece conexión con el controlador del robot, comprobado via pingeo.
+3. El controlador recibe las instrucciones de movimiento.
+4. El controlador verifica las condiciones necesarias para ejecutar las órdenes.
+5. Los servomotores accionan las articulaciones.
+6. El robot realiza el movimiento solicitado.
+7. El sistema devuelve información de posición y estado cuando el protocolo lo permite, dando señal de movimiento constante mediante el Teach Pendant.
+
 ### Comparacion RoboDK y Robotstudio
 
 RobotStudio es en primer lugar un software para productos ABB, eso lo deja mas por debajo en términos de versatilidad, pero a cambio gana profundidad en los robots que utiliza, así como precisión vía los códigos en RAPID, en particular la modalidad de pasar código desde la simulación a RAPID y viceversa es maravilloso a la hora de iterar procesos, tambien es mas complicado de utilizar y pide proyectos en carpetas para funcionar correctamente.
