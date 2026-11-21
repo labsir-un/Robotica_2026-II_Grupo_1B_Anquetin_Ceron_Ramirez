@@ -11,7 +11,7 @@
 
 <h2>Profesores: <br>Pedro Fabián Cárdenas Herrera <br> Manuel Felipe Carranza Montenegro</h2>
 
-<h4>Alejandro Ramirez<br>
+<h4>Alejandro Ramirez Gomez<br>
     Ronan Anquetin<br>
     Nirvana Ceron</h4>
 
